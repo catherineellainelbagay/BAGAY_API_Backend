@@ -1,10 +1,27 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
-@app.route('/')
+@app.route("/")
 def home():
-    return 'Hello, Flask!'
+    return "Server is running."
 
-if __name__ == '__main__':
+@app.route("/chat", methods=["GET", "POST"])
+def chat():
+    if request.method == "GET":
+        return "Chat endpoint is up."
+
+    data = request.get_json()
+    message = data.get("message", "").lower()
+
+    if message == "hi":
+        reply = "Hello, Cath!"
+    else:
+        reply = "why u cryin again?"
+
+    return jsonify({"reply": reply})
+
+if __name__ == "__main__":
     app.run(debug=True)
