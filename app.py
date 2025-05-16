@@ -6,7 +6,7 @@ CORS(app)
 
 @app.route("/")
 def home():
-    return "Server is running."
+    return "Server is Running - Catherine Ellaine L. Bagay"
 
 @app.route("/chat", methods=["GET", "POST"])
 def chat():
