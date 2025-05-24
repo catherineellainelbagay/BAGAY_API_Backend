@@ -16,8 +16,8 @@ csv_path = 'csv/Student-scores.csv'
 df = pd.read_csv(csv_path)
 
 # Create labels for dropout risk and support need
-df['At Risk Dropout'] = ((df['absence_days'] > 10) & (df['weekly_self_study_hours'] < 5)).astype(int)
-df['Needs Support'] = ((df[['english_score', 'math_score', 'physics_score', 'chemistry_score', 'biology_score']].mean(axis=1) < 70) | (df['absence_days'] > 7)).astype(int)
+df['AtRiskDropout'] = ((df['absence_days'] > 10) & (df['weekly_self_study_hours'] < 5)).astype(int)
+df['NeedsSupport'] = ((df[['english_score', 'math_score', 'physics_score', 'chemistry_score', 'biology_score']].mean(axis=1) < 70) | (df['absence_days'] > 7)).astype(int)
 
 
 # Select features
