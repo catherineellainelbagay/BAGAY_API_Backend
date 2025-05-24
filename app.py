@@ -1,27 +1,31 @@
+# app.py
+
 from flask import Flask, request, jsonify
 import pandas as pd
 import joblib
 
 app = Flask(__name__)
 
-# Load model and metadata
-model = joblib.load('trained_data/model_cls.pkl')
+# Load models and feature list
+dropout_model = joblib.load('trained_data/model_dropout.pkl')
+support_model = joblib.load('trained_data/model_support.pkl')
 features = joblib.load('trained_data/model_features.pkl')
-label_encoder = joblib.load('trained_data/label_encoder.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
-
-    # Prepare input
     input_df = pd.DataFrame([data])
-    input_df = input_df.reindex(columns=features, fill_value=0)
+    input_encoded = input_df.reindex(columns=features, fill_value=0)
 
-    # Predict result
-    pred = model.predict(input_df)[0]
-    result = label_encoder.inverse_transform([pred])[0]
+    # Make predictions
+    dropout_pred = dropout_model.predict(input_encoded)[0]
+    support_pred = support_model.predict(input_encoded)[0]
 
-    return jsonify({"Result": result})
+    response = {
+        "AtRiskOfDropout": bool(dropout_pred),
+        "NeedsAcademicSupport": bool(support_pred)
+    }
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)
