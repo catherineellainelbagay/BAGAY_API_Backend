@@ -21,9 +21,20 @@ def predict():
     dropout_pred = dropout_model.predict(input_encoded)[0]
     support_pred = support_model.predict(input_encoded)[0]
 
+    # Optional logic override for debugging
+    if dropout_pred and support_pred:
+        status = "🚨 High Risk: Needs urgent academic support"
+    elif dropout_pred and not support_pred:
+        status = "⚠️ At Risk of Dropout: Monitor closely"
+    elif not dropout_pred and support_pred:
+        status = "📘 Needs Academic Support"
+    else:
+        status = "✅ Stable: No immediate risk detected"
+
     response = {
         "AtRiskOfDropout": bool(dropout_pred),
-        "NeedsAcademicSupport": bool(support_pred)
+        "NeedsAcademicSupport": bool(support_pred),
+        "Status": status
     }
     return jsonify(response)
 

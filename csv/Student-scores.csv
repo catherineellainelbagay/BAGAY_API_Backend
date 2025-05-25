@@ -4,16 +4,19 @@ id,first_name,last_name,email,gender,part_time_job,absence_days,extracurricular_
 3,Tina,Andrews,tina.andrews.3@gslingacademy.com,female,FALSE,9,TRUE,13,Government Officer,81,97,95,96,65,77,94
 4,Tara,Clark,tara.clark.4@gslingacademy.com,female,FALSE,5,FALSE,3,Artist,71,74,88,80,89,63,86
 5,Anthony,Campos,anthony.campos.5@gslingacademy.com,male,FALSE,5,FALSE,10,Unknown,84,77,65,65,80,74,76
+2001,Anthony,Campos,anthony.campos.5@gslingacademy.com,male,FALSE,15,FALSE,2,Artist,53,74,52,50,58,55,76
 6,Kelly,Wade,kelly.wade.6@gslingacademy.com,female,FALSE,2,FALSE,26,Unknown,93,100,67,78,72,80,84
 7,Anthony,Smith,anthony.smith.7@gslingacademy.com,male,FALSE,3,TRUE,23,Software Engineer,99,96,97,73,88,76,64
 8,George,Short,george.short.8@gslingacademy.com,male,TRUE,2,TRUE,34,Software Engineer,95,95,82,63,84,70,85
 9,Stanley,Gutierrez,stanley.gutierrez.9@gslingacademy.com,male,FALSE,6,FALSE,25,Unknown,94,68,94,85,81,74,72
 10,Audrey,Simpson,audrey.simpson.10@gslingacademy.com,female,FALSE,3,TRUE,18,Teacher,98,69,88,71,67,71,73
+2002,Stanley,Gutierrez,stanley.gutierrez.9@gslingacademy.com,male,FALSE,15,FALSE,2,Doctor,87,88,88,92,89,90,95
 11,Gabrielle,White,gabrielle.white.11@gslingacademy.com,female,FALSE,2,FALSE,7,Teacher,65,60,97,94,71,81,66
 12,Clinton,Randolph,clinton.randolph.12@gslingacademy.com,male,FALSE,1,FALSE,7,Unknown,80,61,100,65,87,64,61
 13,Patricia,Gomez,patricia.gomez.13@gslingacademy.com,female,TRUE,7,FALSE,4,Business Owner,94,59,69,67,89,65,73
 14,Pamela,Jackson,pamela.jackson.14@gslingacademy.com,female,FALSE,10,FALSE,2,Business Owner,66,94,86,100,57,90,63
 15,Laura,Jackson,laura.jackson.15@gslingacademy.com,female,FALSE,3,FALSE,39,Doctor,96,90,86,92,92,95,87
+2003,Vicki,Thompson,vicki.thompson.17@gslingacademy.com,female,FALSE,5,FALSE,5,Engineer,61,57,63,59,58,60,55
 16,Roger,Wiley,roger.wiley.16@gslingacademy.com,male,FALSE,6,FALSE,0,Business Owner,94,50,78,64,79,74,84
 17,Vicki,Thompson,vicki.thompson.17@gslingacademy.com,female,FALSE,3,TRUE,30,Scientist,92,64,93,91,80,89,72
 18,Maxwell,Davidson,maxwell.davidson.18@gslingacademy.com,male,FALSE,2,TRUE,28,Software Engineer,86,83,85,79,93,76,77
