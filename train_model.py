@@ -1,5 +1,3 @@
-# train_model.py
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -8,14 +6,14 @@ from sklearn.pipeline import Pipeline
 import joblib
 import os
 
-# Ensure output directory exists
+# Output directory exists
 os.makedirs("trained_data", exist_ok=True)
 
 # Load student data
 csv_path = 'csv/Student-scores.csv'
 df = pd.read_csv(csv_path)
 
-# Create labels for dropout risk and support need
+# Labels for dropout risk and support need
 df['AtRiskDropout'] = ((df['absence_days'] > 10) & (df['weekly_self_study_hours'] < 5)).astype(int)
 df['NeedsSupport'] = (df[['english_score', 'math_score', 'physics_score', 'chemistry_score', 'biology_score']].mean(axis=1) < 70).astype(int)
 
