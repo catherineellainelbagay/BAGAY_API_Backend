@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app) 
 
 # Load models and features
 dropout_model = joblib.load('trained_data/model_dropout.pkl')
